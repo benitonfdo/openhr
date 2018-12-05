@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ohmainpane.component.css']
 })
 export class OhmainpaneComponent implements OnInit {
-
-  constructor() { }
+  appName = '';
+  constructor() {}
 
   ngOnInit() {
   }
 
+  onAddApp(event: Event) {
+      this.appName = (<HTMLInputElement>event.target).value;
+  }
 }
