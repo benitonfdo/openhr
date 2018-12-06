@@ -7,12 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OhmainpaneComponent implements OnInit {
   appName = '';
+  apps = [];
+
   constructor() {}
 
   ngOnInit() {
   }
 
-  onAddApp(event: Event) {
-      this.appName = (<HTMLInputElement>event.target).value;
+  onAddApplication(event: Event) {
+      this.apps.push(this.appName);
   }
+
+  onDeleteAppication(app : string) {
+    this.apps.slice(this.apps.indexOf(app),1);
+  }
+
 }

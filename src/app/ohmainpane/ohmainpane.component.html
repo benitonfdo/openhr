@@ -1,8 +1,20 @@
-<p>
-  App name is {{appName}}
-  </p>
-  <label for="appName"></label>
-  <input id="appName"
-    [(ngModel)]="appName" class="form-control"
-
-  />
+<div class="row">
+  <div class="col-sm-12 form-group">
+    <label for="appName">Add Applications</label>
+    <div>
+      <input id="appName" [(ngModel)]="appName" class="form-control" (keyup.enter) = "onAddApplication()" />
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 ">
+    <button class="col-sm-offset-10 col-sm-2 btn btn-primary " (click)="onAddApplication()">Add</button>
+  </div>
+</div>
+<!-- Applications which are added -->
+<div class="row">
+  <div class="col-sm-12 padding-top" *ngFor="let app of apps; let i = index">
+    <span [ngStyle]="{color : i%2===0 ? 'green':'black'}">{{app}}</span>
+    <!--<button class="col-sm-1 pull-right btn " (click)="onDeleteApplication()">x</button> -->
+  </div>
+</div>

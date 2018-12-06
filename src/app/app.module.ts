@@ -7,6 +7,7 @@ import { OhmenuComponent } from './ohmenu/ohmenu.component';
 import { OhsidenavComponent } from './ohsidenav/ohsidenav.component';
 import { OhmainpaneComponent } from './ohmainpane/ohmainpane.component';
 import { OhsidepaneComponent } from './ohsidepane/ohsidepane.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { OhsidepaneComponent } from './ohsidepane/ohsidepane.component';
     OhmenuComponent,
     OhsidenavComponent,
     OhmainpaneComponent,
-    OhsidepaneComponent
+    OhsidepaneComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
